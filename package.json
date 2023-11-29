@@ -10,13 +10,7 @@
     "lint:format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\" --plugin-search-dir --ignore-path .gitignore",
     "lint:format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\" --plugin-search-dir --ignore-path .gitignore",
     "lint": "pnpm lint:fix && pnpm lint:format",
-    "prepare": "husky install",
-    "commit": "git-cz"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
@@ -39,7 +33,6 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "commitizen": "^4.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "eslint-config-prettier": "^9.0.0",
