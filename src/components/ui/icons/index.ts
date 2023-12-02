@@ -1,2 +1,3 @@
 export * from './arrow-left'
-export * from './checkmark-animation'
+export * from './star'
+export * from './tooltip'
