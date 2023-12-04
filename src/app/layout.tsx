@@ -2,6 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { DM_Sans } from 'next/font/google'
 
+import { Header } from '@/components/header'
+
 import { siteConfig } from '@/config/site'
 
 const DmSans = DM_Sans({ subsets: ['latin'] })
@@ -49,7 +51,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt_BR">
-      <body className={DmSans.className}>{children}</body>
+      <body className={DmSans.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }

@@ -12,6 +12,7 @@
     "prettier-plugin-tailwindcss"
   ],
   "importOrder": [
+    "^@/env.mjs$",
     "^react",
     "^@[^/]",
     "^@/components/(.*)$",
