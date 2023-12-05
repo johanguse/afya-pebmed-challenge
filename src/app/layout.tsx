@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt_BR">
+    <html lang="pt_BR" suppressHydrationWarning>
       <body className={DmSans.className}>
         <Header />
         {children}

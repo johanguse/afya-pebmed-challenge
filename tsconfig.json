@@ -25,6 +25,7 @@
       "@/components/*": ["./src/components/*"],
       "@/config/*": ["./config/*"],
       "@/lib/*": ["./src/lib/*"],
+      "@/models/*": ["./src/models/*"],
       "@/*": ["./*"],
       "@/types/*": ["./types/*"]
     }

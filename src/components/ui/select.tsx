@@ -1,3 +1,6 @@
+import { InputErrorMessage } from './input-error'
+import { useField } from 'formik'
+
 import React from 'react'
 
 export type Option = {
@@ -13,13 +16,9 @@ type Props = {
   className?: string
 }
 
-export function SelectField({
-  label,
-  id,
-  placeholder,
-  options,
-  className,
-}: Props) {
+export function Select({ label, id, placeholder, options, className }: Props) {
+  const [field, meta] = useField(id)
+
   const renderOptions = React.useMemo(
     () =>
       options.map(({ label, value }) => (
@@ -39,12 +38,21 @@ export function SelectField({
       <label htmlFor={id} className="text-xs text-gray-300">
         {label}
       </label>
-      <select id={id} name={id} defaultValue="" className={selectClasses}>
+      <select
+        {...field}
+        id={id}
+        name={id}
+        defaultValue=""
+        className={selectClasses}
+      >
         <option value="" disabled hidden>
           {placeholder}
         </option>
         {renderOptions}
       </select>
+      {meta.touched && meta.error ? (
+        <InputErrorMessage message={meta.error} />
+      ) : null}
     </div>
   )
 }

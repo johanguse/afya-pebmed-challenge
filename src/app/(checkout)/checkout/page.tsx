@@ -1,13 +1,13 @@
 import { Suspense } from 'react'
 
-import { FormCheckout } from '@/components/form-checkout'
+import FormCheckout from '@/components/form-checkout'
 import { PaymentMethods } from '@/components/payment-methods'
 import { PlansListRadioForm } from '@/components/plans-list'
 import { SkeletonPlans as Skeleton } from '@/components/skeleton/skeleton-plans'
 import { IconTooltip } from '@/components/ui/icons'
 import { Tooltip } from '@/components/ui/tooltip'
 
-export default function CheckoutPage() {
+export default async function CheckoutPage() {
   return (
     <>
       <div className="m-auto flex w-full flex-col-reverse px-4 py-8 lg:grid lg:max-w-4xl lg:flex-none lg:grid-cols-2 lg:gap-48 lg:px-0">
@@ -30,7 +30,7 @@ export default function CheckoutPage() {
           </div>
           <div className="mb-4 flex w-full flex-col space-y-3 py-4">
             <Suspense fallback={<Skeleton />}>
-              <PlansListRadioForm />
+              <PlansListRadioForm name="plan" />
             </Suspense>
           </div>
           <div className="mx-auto flex w-full flex-row items-center justify-center text-center">
