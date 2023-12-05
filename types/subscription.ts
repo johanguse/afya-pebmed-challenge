@@ -1,4 +1,4 @@
-export type SubscriptionApiResponse = {
+export type ISubscription = {
   couponCode: string | null
   creditCardCPF: string
   creditCardCVV: string

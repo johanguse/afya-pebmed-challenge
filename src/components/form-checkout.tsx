@@ -10,20 +10,10 @@ import { Button } from '@/components/ui/button'
 import InputField from '@/components/ui/input-field'
 import { Select } from '@/components/ui/select'
 
-import { CheckoutFormModel } from '@/models/checkout'
-
-interface FormValues {
-  name: string
-  cardNumber: string
-  cardExpiry: string
-  cardCvc: string
-  cpf: string
-  couponCode: string
-  installments: number
-}
+import { CheckoutFormModel, ICheckoutForm } from '@/types/checkout'
 
 const FormCheckout: React.FC = () => {
-  const formik = useFormik<FormValues>({
+  const formik = useFormik<ICheckoutForm>({
     initialValues: {
       name: '',
       cardNumber: '',

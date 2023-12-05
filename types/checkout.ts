@@ -19,10 +19,10 @@ export const CheckoutFormModel = z.object({
     .min(14, { message: 'Preencha seu CPF ' })
     .max(14)
     .refine(validateCPF, { message: ' CPF inválido ' }),
-  coupon: z.string().optional(),
+  couponCode: z.string().optional(),
   installments: z
     .number({ required_error: 'Selecione o número de parcelas' })
     .min(1, { message: 'Escolha o número de parcelas' }),
 })
 
-export type CheckoutForm = z.infer<typeof CheckoutFormModel>
+export type ICheckoutForm = z.infer<typeof CheckoutFormModel>

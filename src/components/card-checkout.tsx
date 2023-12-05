@@ -3,7 +3,7 @@ import { env } from '@/env.mjs'
 import { IconStar } from '@/components/ui/icons/star'
 
 import { formatCPF } from '@/lib/format'
-import { SubscriptionApiResponse } from '@/types/subscription-api'
+import { ISubscription } from '@/types/subscription'
 
 async function getCheckoutData() {
   try {
@@ -15,7 +15,7 @@ async function getCheckoutData() {
       throw new Error(`HTTP error, status = ${res.status}`)
     }
 
-    const data: SubscriptionApiResponse = await res.json()
+    const data: ISubscription = await res.json()
 
     return data
   } catch (error) {
