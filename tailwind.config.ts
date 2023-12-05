@@ -15,6 +15,8 @@ const config: Config = {
       },
       boxShadow: {
         xl: '0 4px 20px 0 rgba(0, 0, 0, 0.06)',
+        checkedOption: '0 0 0 2px rgb(201, 197, 212)',
+        unckedOption: '0 0 0 2px rgb(244, 243, 246)',
       },
       colors: {
         white: '#fff',

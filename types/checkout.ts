@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { validateCPF } from '@/lib/valid-cpf'
 
 export const CheckoutFormModel = z.object({
+  offerId: z.string().readonly(),
   cardNumber: z
     .string({ required_error: 'Preencha o número do cartão' })
     .min(13, { message: 'Preencha o número do cartão' })
@@ -21,7 +22,7 @@ export const CheckoutFormModel = z.object({
     .refine(validateCPF, { message: ' CPF inválido ' }),
   couponCode: z.string().optional(),
   installments: z
-    .number({ required_error: 'Selecione o número de parcelas' })
+    .string({ required_error: 'Selecione o número de parcelas' })
     .min(1, { message: 'Escolha o número de parcelas' }),
 })
 

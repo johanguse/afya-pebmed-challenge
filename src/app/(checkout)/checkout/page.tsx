@@ -1,8 +1,8 @@
 import { Suspense } from 'react'
 
-import FormCheckout from '@/components/form-checkout'
+import { FormCheckout } from '@/components/form-checkout'
+import { OfferList } from '@/components/offer-list'
 import { PaymentMethods } from '@/components/payment-methods'
-import { PlansListRadioForm } from '@/components/plans-list'
 import { SkeletonPlans as Skeleton } from '@/components/skeleton/skeleton-plans'
 import { IconTooltip } from '@/components/ui/icons'
 import { Tooltip } from '@/components/ui/tooltip'
@@ -23,14 +23,14 @@ export default async function CheckoutPage() {
         </div>
         <div className="mb-12 w-full lg:mb-0">
           <h2 className="mb-2 text-xl">Confira o seu plano:</h2>
-          <div className="mb-4">
+          <div className="mb-8">
             <span className="text-custom-yellow-600 rounded-xl border-1 border-gray-50 px-3 py-1 text-xs">
               fulano@cicrano.com.br
             </span>
           </div>
-          <div className="mb-4 flex w-full flex-col space-y-3 py-4">
+          <div className="flex w-full flex-col space-y-3">
             <Suspense fallback={<Skeleton />}>
-              <PlansListRadioForm name="plan" />
+              <OfferList />
             </Suspense>
           </div>
           <div className="mx-auto flex w-full flex-row items-center justify-center text-center">
