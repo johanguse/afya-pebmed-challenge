@@ -1,4 +1,4 @@
-export type OfferApiResponse = {
+export type IOffer = {
   id: number
   storeId: string
   title: string

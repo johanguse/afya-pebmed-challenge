@@ -3,10 +3,10 @@ import { env } from '@/env.mjs'
 import { Fragment } from 'react'
 
 import { formatCurrency, formatPercentage } from '@/lib/format'
-import { OfferApiResponse } from '@/types/offer-api'
+import { IOffer } from '@/types/offer'
 
 async function getPlansListData() {
-  await new Promise((r) => setTimeout(r, 2000))
+  //await new Promise((r) => setTimeout(r, 2000))
 
   try {
     const res = await fetch(env.NEXT_PUBLIC_OFFER_API_URL, {
@@ -17,7 +17,7 @@ async function getPlansListData() {
       throw new Error(`HTTP error, status = ${res.status}`)
     }
 
-    const data: OfferApiResponse[] = await res.json()
+    const data: IOffer[] = await res.json()
 
     data.sort((a, b) => b.id - a.id)
 
