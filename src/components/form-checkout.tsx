@@ -17,7 +17,7 @@ interface FormValues {
   cardNumber: string
   cardExpiry: string
   cardCvc: string
-  CPF: string
+  cpf: string
   couponCode: string
   installments: number
 }
@@ -29,7 +29,7 @@ const FormCheckout: React.FC = () => {
       cardNumber: '',
       cardExpiry: '',
       cardCvc: '',
-      CPF: '',
+      cpf: '',
       couponCode: '',
       installments: 0,
     },
@@ -111,11 +111,11 @@ const FormCheckout: React.FC = () => {
           <div className="mb-6">
             <InputField
               label="CPF"
-              name="CPF"
+              name="cpf"
               id="cpf"
               placeholder="000.000.000-00"
               mask="999.999.999-99"
-              error={formik.touched.CPF && formik.errors.CPF}
+              error={formik.touched.cpf && formik.errors.cpf}
             />
           </div>
 
@@ -129,26 +129,7 @@ const FormCheckout: React.FC = () => {
             />
           </div>
 
-          <div className="mb-6">
-            <Select
-              label="Número de parcelas"
-              id="installments"
-              placeholder="Selecionar"
-              options={[
-                { label: 'Selecionar', value: '0' },
-                { label: '1x de R$ 580,00/mês', value: '1' },
-                { label: '2x de R$ 270,00/mês', value: '2' },
-                { label: '3x de R$ 180,00/mês', value: '3' },
-                { label: '4x de R$ 144,00/mês', value: '4' },
-                { label: '5x de R$ 120,00/mês', value: '5' },
-                { label: '6x de R$ 96,00/mês', value: '6' },
-                { label: '7x de R$ 80,00/mês', value: '7' },
-                { label: '8x de R$ 72,00/mês', value: '8' },
-                { label: '9x de R$ 64,00/mês', value: '9' },
-                { label: '10x de R$ 60,00/mês', value: '10' },
-              ]}
-            />
-          </div>
+          <div className="mb-6"></div>
         </fieldset>
 
         <Button type="submit" className="w-full">
