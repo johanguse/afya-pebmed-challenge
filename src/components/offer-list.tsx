@@ -6,7 +6,7 @@ import { IOffer } from '@/types/offer'
 
 async function getOfferListData() {
   try {
-    const url = `https://private-0ced4-pebmeddesafiofrontend.apiary-mock.com/offer`
+    const url = `${process.env.NEXT_PUBLIC_MOCK_API_URL}/offer`
 
     const res = await fetch(url, {
       next: { revalidate: 3600 },
