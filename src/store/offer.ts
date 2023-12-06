@@ -1,3 +1,5 @@
+'use client'
+
 import { create } from 'zustand'
 
 import { IOffer } from '@/types/offer'
