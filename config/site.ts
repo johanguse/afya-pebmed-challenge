@@ -1,6 +1,6 @@
 import { SiteConfig } from 'index'
 
-const site_url = process.env.NEXT_PUBLIC_APP_URL!
+const site_url = process.env.NEXT_PUBLIC_VERCEL_URL!
 
 export const siteConfig: SiteConfig = {
   name: 'Front-end test PedMed Afya',
