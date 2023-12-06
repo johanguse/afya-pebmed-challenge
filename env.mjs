@@ -7,9 +7,9 @@ export const env = createEnv({
     // This is optional because it's only used in development.
     // See https://next-auth.js.org/deployment.
     NEXTAUTH_URL: z.string().url().optional(),
+    NEXT_PUBLIC_APP_URL: z.string().min(1),
   },
   client: {
-    NEXT_PUBLIC_APP_URL: z.string().min(1),
     NEXT_PUBLIC_SUBSCRIPTION_API_URL: z.string().url().min(1),
     NEXT_PUBLIC_OFFER_API_URL: z.string().url().min(1),
   },
