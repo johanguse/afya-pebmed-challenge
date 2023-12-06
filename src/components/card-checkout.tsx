@@ -7,7 +7,7 @@ import { ISubscription } from '@/types/subscription'
 
 async function getCheckoutData() {
   try {
-    const url = `${process.env.NEXT_PUBLIC_MOCK_API_URL}/subscription`
+    const url = `https://private-0ced4-pebmeddesafiofrontend.apiary-mock.com/subscription`
 
     const res = await fetch(url, {
       cache: 'no-store',
