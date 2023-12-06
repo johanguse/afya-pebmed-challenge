@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 
-export default function NotFoundPage() {
+export default function IndexPage() {
   return (
     <div className="flex flex-col items-center justify-center py-24">
       <p className="text-5xl">Home Page</p>

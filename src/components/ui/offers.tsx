@@ -21,7 +21,7 @@ export function Offers({ offers }: Props) {
 
   useEffect(() => {
     setOffer(offers[0])
-  }, [])
+  }, [offers, setOffer])
 
   return (
     <div className="mb-8 flex flex-col gap-4">

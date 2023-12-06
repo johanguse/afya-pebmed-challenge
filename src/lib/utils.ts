@@ -20,14 +20,14 @@ export function removeSimilarTWClasses(
     if (i !== -1) {
       const id = classname.slice(0, i)
       if (id === 'text') {
-        result.push(classname)
+        result.push(classname as never)
       } else if (ids.get(id)) {
         preferLast && ids.set(id, classname)
       } else {
         ids.set(id, classname)
       }
     } else {
-      result.push(classname)
+      result.push(classname as never)
     }
   }
 

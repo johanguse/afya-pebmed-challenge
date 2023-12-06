@@ -24,7 +24,7 @@ export default async function CheckoutPage() {
         <div className="mb-12 w-full lg:mb-0">
           <h2 className="mb-2 text-xl">Confira o seu plano:</h2>
           <div className="mb-8">
-            <span className="text-custom-yellow-600 rounded-xl border-1 border-gray-50 px-3 py-1 text-xs">
+            <span className="rounded-xl border-1 border-gray-50 px-3 py-1 text-xs">
               fulano@cicrano.com.br
             </span>
           </div>
