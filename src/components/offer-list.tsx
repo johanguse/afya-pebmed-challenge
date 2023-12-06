@@ -30,9 +30,5 @@ async function getOfferListData() {
 export async function OfferList() {
   const data = await getOfferListData()
 
-  const handlePlanChange = (planId: number) => {
-    console.log('handlePlanChange', planId)
-  }
-
   return <Offers offers={data} />
 }
