@@ -12,7 +12,8 @@
     "lint:format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\" --plugin-search-dir --ignore-path .gitignore",
     "lint:format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\" --plugin-search-dir --ignore-path .gitignore",
     "lint": "npm run lint:fix && npm run lint:format",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test:unit": "vitest"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
@@ -24,9 +25,12 @@
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.7.1",
+    "@testing-library/user-event": "^14.5.1",
+    "@vitejs/plugin-react": "^4.2.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "formik": "^2.4.5",
+    "jsdom": "^23.0.1",
     "next": "14.0.3",
     "ramda": "^0.29.1",
     "react": "^18",
@@ -37,6 +41,8 @@
     "zustand": "^4.4.7"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^14.1.2",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/node": "^20",
     "@types/ramda": "^0.29.9",
@@ -44,7 +50,6 @@
     "@types/react-dom": "^18",
     "@types/react-input-mask": "^3.0.5",
     "autoprefixer": "^10.0.1",
-    "cypress": "^13.6.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "eslint-config-prettier": "^9.0.0",
@@ -56,6 +61,7 @@
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^1.0.1"
   }
 }
