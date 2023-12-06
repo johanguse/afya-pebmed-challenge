@@ -7,7 +7,9 @@ import { ISubscription } from '@/types/subscription'
 
 async function getCheckoutData() {
   try {
-    const res = await fetch(env.NEXT_PUBLIC_SUBSCRIPTION_API_URL, {
+    const url = `${process.env.NEXT_PUBLIC_MOCK_API_URL}/subscription`
+
+    const res = await fetch(url, {
       cache: 'no-store',
     })
 

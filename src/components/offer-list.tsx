@@ -6,7 +6,9 @@ import { IOffer } from '@/types/offer'
 
 async function getOfferListData() {
   try {
-    const res = await fetch(env.NEXT_PUBLIC_OFFER_API_URL, {
+    const url = `${process.env.NEXT_PUBLIC_MOCK_API_URL}/offer`
+
+    const res = await fetch(url, {
       next: { revalidate: 3600 },
     })
 
