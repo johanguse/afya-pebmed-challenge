@@ -1,6 +1,6 @@
 import { Option } from '@/components/ui/input-select'
 
-import { formatCurrency } from '@/lib/format'
+import { formatCurrency } from '@/lib/format/currency'
 
 export function generateInstallments(
   installments: number = 0,
