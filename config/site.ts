@@ -4,7 +4,7 @@ if (!process.env.NEXT_PUBLIC_VERCEL_URL) {
   throw new Error('Missing env.NEXT_PUBLIC_VERCEL_URL')
 }
 
-const site_url = process.env.NEXT_PUBLIC_VERCEL_URL.replace(/\/$/, '')
+const site_url = 'localhost:3000'
 
 export const siteConfig: SiteConfig = {
   name: 'Front-end test PedMed Afya',
