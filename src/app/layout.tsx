@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     },
   ],
   creator: 'johanguse',
+  metadataBase: new URL(siteConfig.url),
   openGraph: {
     type: 'website',
     locale: 'pt_BR',

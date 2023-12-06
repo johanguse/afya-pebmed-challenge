@@ -19,8 +19,8 @@ export const getBaseUrl = (): string => {
 export const siteConfig: SiteConfig = {
   name: 'Front-end test PedMed Afya',
   description: 'Checkout app para testas os conhecimentos em front-end',
-  url: getBaseUrl(), // Call the function to get the base URL dynamically
-  ogImage: `${getBaseUrl()}/og.jpg`, // Ensuring ogImage uses the dynamic base URL
+  url: getBaseUrl(),
+  ogImage: `${getBaseUrl()}/og.jpg`,
   links: {
     twitter: 'https://twitter.com/johanguse',
     github: 'https://github.com/johanguse/next-saas-template',
