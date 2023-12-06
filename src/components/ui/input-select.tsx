@@ -9,7 +9,7 @@ export type Option = {
   value: string
 }
 
-type Props = {
+type SelectProps = React.InputHTMLAttributes<HTMLSelectElement> & {
   label: string
   id: string
   placeholder: string
@@ -17,7 +17,14 @@ type Props = {
   className?: string
 }
 
-export function Select({ label, id, placeholder, options, className }: Props) {
+export function SelectField({
+  label,
+  id,
+  placeholder,
+  options,
+  className,
+  ...props
+}: SelectProps) {
   const [field, meta] = useField(id)
 
   const renderOptions = React.useMemo(
@@ -39,14 +46,8 @@ export function Select({ label, id, placeholder, options, className }: Props) {
       <label htmlFor={id} className="text-xs text-gray-300">
         {label}
       </label>
-      <select
-        {...field}
-        id={id}
-        name={id}
-        defaultValue=""
-        className={selectClasses}
-      >
-        <option value="" disabled hidden>
+      <select {...field} id={id} name={id} className={selectClasses} {...props}>
+        <option value="-1" disabled hidden>
           {placeholder}
         </option>
         {renderOptions}

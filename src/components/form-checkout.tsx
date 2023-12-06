@@ -7,21 +7,25 @@ import { z } from 'zod'
 import React from 'react'
 
 import { Button } from '@/components/ui/button'
-import InputField from '@/components/ui/input-field'
-import { Select } from '@/components/ui/select'
+import { InputField } from '@/components/ui/input-field'
+import { SelectField } from '@/components/ui/input-select'
 
+import { generateInstallments } from '@/lib/generate-installments'
+import { useOfferStore } from '@/store/offer'
 import { CheckoutFormModel, ICheckoutForm } from '@/types/checkout'
 
-const FormCheckout: React.FC = () => {
+export function FormCheckout() {
+  const offerSelected = useOfferStore((state) => state.offerSelected)
   const formik = useFormik<ICheckoutForm>({
     initialValues: {
+      offerId: '',
       name: '',
       cardNumber: '',
       cardExpiry: '',
       cardCvc: '',
       cpf: '',
       couponCode: '',
-      installments: 0,
+      installments: '0',
     },
     validate: (values) => {
       try {
@@ -40,7 +44,7 @@ const FormCheckout: React.FC = () => {
   return (
     <FormikProvider value={formik}>
       <form onSubmit={formik.handleSubmit}>
-        <input type="hidden" name="offerId" value="32" />
+        <input type="hidden" name="offerId" value={offerSelected?.id || ''} />
         <fieldset className="mb-2">
           <div className="mb-6">
             <InputField
@@ -119,7 +123,19 @@ const FormCheckout: React.FC = () => {
             />
           </div>
 
-          <div className="mb-6"></div>
+          <div className="mb-6">
+            <SelectField
+              label="Número de parcelas"
+              name="installments"
+              id="installments"
+              placeholder="Selecionar"
+              options={generateInstallments(
+                offerSelected?.installments,
+                offerSelected?.fullPrice,
+                offerSelected?.discountAmmount
+              )}
+            />
+          </div>
         </fieldset>
 
         <Button type="submit" className="w-full">
@@ -129,5 +145,3 @@ const FormCheckout: React.FC = () => {
     </FormikProvider>
   )
 }
-
-export default FormCheckout

@@ -7,8 +7,7 @@ import { InputErrorMessage } from '@/components/ui/input-error'
 
 import { cn } from '@/lib/utils'
 
-export interface Input2Props
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   name: string
   id: string
   label: string
@@ -17,7 +16,7 @@ export interface Input2Props
   error?: string | false | undefined
 }
 
-const InputField: React.FC<Input2Props> = ({
+export function InputField({
   name,
   id,
   label,
@@ -25,7 +24,7 @@ const InputField: React.FC<Input2Props> = ({
   placeholder,
   error,
   ...inputProps
-}) => {
+}: InputProps) {
   const { getFieldProps, touched, errors } = useFormikContext<any>()
 
   const commonClasses =
@@ -74,5 +73,3 @@ const InputField: React.FC<Input2Props> = ({
     </div>
   )
 }
-
-export default InputField
