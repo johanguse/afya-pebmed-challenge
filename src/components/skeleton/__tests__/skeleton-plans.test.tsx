@@ -10,11 +10,9 @@ describe('SkeletonPlans', () => {
   it('renders correctly with the skeleton-plans container and two Skeleton divs', () => {
     render(<SkeletonPlans />)
 
-    // Check for the skeleton-plans wrapper element
     const skeletonPlansElement = screen.getByTestId('skeleton-plans')
     expect(skeletonPlansElement).toBeInTheDocument()
 
-    // Check for individual Skeleton divs
     const skeleton1 = screen.getByTestId('skeleton-1')
     expect(skeleton1).toHaveClass('mb-2 h-24 w-full bg-gray-200 py-6')
     const skeleton2 = screen.getByTestId('skeleton-2')

@@ -10,11 +10,9 @@ describe('SkeletonSuccess', () => {
   it('renders correctly with three Skeleton divs', () => {
     render(<SkeletonSuccess />)
 
-    // Check for the skeleton-success wrapper element
     const skeletonSuccessElement = screen.getByTestId('skeleton-success')
     expect(skeletonSuccessElement).toBeInTheDocument()
 
-    // Check for individual Skeleton divs
     const skeleton1 = screen.getByTestId('skeleton-1')
     expect(skeleton1).toHaveClass('mb-2 h-10 w-full bg-gray-200 py-6')
     const skeleton2 = screen.getByTestId('skeleton-2')
