@@ -1,5 +1,3 @@
-import { env } from '@/env.mjs'
-
 import { Offers } from '@/components/ui/offers'
 
 import { IOffer } from '@/types/offer'

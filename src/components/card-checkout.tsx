@@ -1,5 +1,3 @@
-import { env } from '@/env.mjs'
-
 import { IconStar } from '@/components/ui/icons/star'
 
 import { formatCPF } from '@/lib/format/cpf'

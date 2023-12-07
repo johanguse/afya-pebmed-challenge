@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint:fix": "eslint --ext \"src/**/*.{js,jsx,ts,tsx}\" --fix --quiet",
-    "lint:format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\" --plugin-search-dir --ignore-path .gitignore",
-    "lint:format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\" --plugin-search-dir --ignore-path .gitignore",
+    "lint:format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\" --ignore-path .gitignore",
+    "lint:format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\" --ignore-path .gitignore",
     "lint": "npm run lint:fix && npm run lint:format",
     "prepare": "husky install",
     "test:unit": "vitest"
@@ -54,6 +54,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-tailwindcss": "^3.13.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.1.0",
     "postcss": "^8",

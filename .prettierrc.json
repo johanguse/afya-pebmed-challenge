@@ -7,10 +7,6 @@
   "bracketSpacing": true,
   "trailingComma": "es5",
   "semi": false,
-  "plugins": [
-    "@trivago/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss"
-  ],
   "importOrder": [
     "^@/env.mjs$",
     "^react",
@@ -20,10 +16,9 @@
     "^/*/(.*)$"
   ],
   "importOrderSeparation": true,
-  "importOrderBuiltinModulesToTop": true,
-  "importOrderParserPlugins": ["typescript", "classProperties", "jsx"],
   "importOrderSortSpecifiers": true,
-  "importOrderMergeDuplicateImports": true,
-  "importOrderCombineTypeAndValueImports": true,
-  "importOrderTypeScriptVersion": "5.0.0"
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ]
 }
