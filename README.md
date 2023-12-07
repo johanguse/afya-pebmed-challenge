@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Afya PEBMED Challenge
+
+![Vercel](http://therealsujitk-vercel-badge.vercel.app/?app=afya-pebmed-challenge) ![License](https://img.shields.io/badge/license-MIT-blue)
+
+This is the README for the Afya PEBMED Challenge project.
+
+Develop the frontend of a checkout system where a user can subscribe annually or monthly, displaying success or error when submitting the form, and sending payment information for processing by the backend.
+
+Follow the instructions below to set up and run the project on your local machine.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+Node.js (v16 or higher)<br/>
+npm, Yarn or pnpm as your package manager, any of them should work.<br/>
 
 ## Getting Started
 
-First, run the development server:
+#### Installation
+
+Clone this repository to your local machine using:
+
+```bash
+git clone https://github.com/johanguse/afya-pebmed-challenge.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd afya-pebmed-challenge
+```
+
+Install project dependencies using npm or yarn:
+
+```bash
+npm install
+```
+
+OR
+
+```bash
+yarn install
+```
+
+OR
+
+```bash
+pnpm install
+```
+
+## Environment Configuration
+
+Before running the project, make sure to set up your environment variables by following these steps:
+
+1. Locate the `.env.example` file in the project's root directory.
+
+2. Create a copy of the `.env.example` file and rename it to `.env`.
+
+3. Open the newly created `.env` file in a text editor.
+
+4. Update the environment variables in the `.env` file as needed. For example:
+
+```dotenv
+NEXT_PUBLIC_MOCK_API_URL="https://private-0ced4-pebmeddesafiofrontend.apiary-mock.com"
+```
+
+(without slash / in the url of the URL)
+
+## Running the Development Server
+
+To start the development server, use the following command:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+OR
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+OR
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Visit <http://localhost:3000> in your web browser to see the application running.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Extra
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We use ESLint and Prettier to ensure code quality and consistency. You can run the linting and formatting checks using the following command:
 
-## Deploy on Vercel
+```bash
+npm run lint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### OR
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+yarn lint
+```
+
+OR
+
+```bash
+pnpm lint
+```
+
+## Contributing
+
+Contributions are welcome! Please read the Contribution Guidelines for more details on how to contribute to this project.
+
+## License
+
+This project is licensed under the MIT License.
