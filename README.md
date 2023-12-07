@@ -3,6 +3,10 @@
 
 ![Vercel](http://therealsujitk-vercel-badge.vercel.app/?app=afya-pebmed-challenge) ![License](https://img.shields.io/badge/license-MIT-blue)
 
+
+![og](https://github.com/johanguse/afya-pebmed-challenge/assets/6184866/6712eb4f-17c2-45ee-a1e1-170f5ce17b56)
+
+
 This is the README for the Afya PEBMED Challenge project.
 
 Develop the frontend of a checkout system where a user can subscribe annually or monthly, displaying success or error when submitting the form, and sending payment information for processing by the backend.
