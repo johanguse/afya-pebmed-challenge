@@ -6,19 +6,15 @@ type IconArrowLeftProps = React.SVGProps<SVGSVGElement> & {
 }
 
 export function IconArrowLeft({ width, height, ...props }: IconArrowLeftProps) {
-  const { 'aria-label': ariaLabel, ...rest } = props
-
   return (
     <svg
-      {...rest}
-      aria-label={ariaLabel}
+      {...props}
       role="img"
       version="1.2"
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
     >
-      {ariaLabel && <title>{ariaLabel}</title>}{' '}
       <path
         className="fill-black"
         fillRule="evenodd"

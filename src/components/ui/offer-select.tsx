@@ -1,4 +1,5 @@
-import { formatCurrency, formatPercentage } from '@/lib/format'
+import { formatCurrency } from '@/lib/format/currency'
+import { formatPercentage } from '@/lib/format/percent'
 
 type Props = {
   id: string

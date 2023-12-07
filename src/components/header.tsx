@@ -7,7 +7,7 @@ export function Header() {
   return (
     <header className="flex items-center justify-between p-8 lg:px-16 lg:py-8">
       <Link href="/">
-        <IconArrowLeft width={8} height={13} aria-label="Voltar" />
+        <IconArrowLeft width={8} height={13} />
       </Link>
       <Image
         src="/images/logo_w.svg"

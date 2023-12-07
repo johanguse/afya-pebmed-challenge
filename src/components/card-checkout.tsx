@@ -2,7 +2,7 @@ import { env } from '@/env.mjs'
 
 import { IconStar } from '@/components/ui/icons/star'
 
-import { formatCPF } from '@/lib/format'
+import { formatCPF } from '@/lib/format/cpf'
 import { ISubscription } from '@/types/subscription'
 
 async function getCheckoutData() {
