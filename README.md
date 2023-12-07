@@ -33,7 +33,7 @@ Additional libraries and tools used in the project:
 - **[clsx](https://github.com/lukeed/clsx)**: A tiny utility for constructing `className` strings in a conditional and cleaner way.
 - **[Ramda](https://ramdajs.com/)**: A practical functional library for JavaScript programmers, focusing on simplicity and performance.
 
-Feel free to explore and learn more about each of these technologies to understand how they contribute to the project.
+To maintain high code quality and ensure that all tests pass, we use GitHub Actions for automated testing. This integration streamlines our development process, allowing for more efficient and effective testing workflows.
 
 ## ⚒️ Prerequisites
 
