@@ -1,7 +1,8 @@
 import { useFormikContext } from 'formik'
 
 import React from 'react'
-import InputMask from 'react-input-mask'
+
+import InputMask from '@mona-health/react-input-mask'
 
 import { InputErrorMessage } from '@/components/ui/input-error'
 
@@ -33,7 +34,7 @@ export function InputField({
   const inputField = mask ? (
     <InputMask
       mask={mask}
-      maskChar={null}
+      maskPlaceholder={null}
       id={name}
       placeholder={placeholder}
       className={cn(commonClasses, {
