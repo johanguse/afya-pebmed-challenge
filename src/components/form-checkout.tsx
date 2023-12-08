@@ -2,9 +2,10 @@
 
 import { useFormik } from 'formik'
 import { FormikProvider } from 'formik'
+import { useRouter } from 'next/navigation'
 import { z } from 'zod'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { InputField } from '@/components/ui/input-field'
@@ -15,10 +16,12 @@ import { useOfferStore } from '@/store/offer'
 import { CheckoutFormModel, ICheckoutForm } from '@/types/checkout'
 
 export function FormCheckout() {
+  const router = useRouter()
   const offerSelected = useOfferStore((state) => state.offerSelected)
+
   const formik = useFormik<ICheckoutForm>({
     initialValues: {
-      offerId: '',
+      offerId: offerSelected?.id.toString() || '',
       name: '',
       cardNumber: '',
       cardExpiry: '',
@@ -37,9 +40,20 @@ export function FormCheckout() {
       }
     },
     onSubmit: (values) => {
+      // save form data
       console.log(values)
+
+      //redirect to success
+      router.push('/checkout/success')
     },
   })
+
+  useEffect(() => {
+    const offerIdAsString = offerSelected?.id?.toString() || ''
+    if (formik.values.offerId !== offerIdAsString) {
+      formik.setFieldValue('offerId', offerIdAsString)
+    }
+  }, [offerSelected, formik.values.offerId, formik.setFieldValue])
 
   return (
     <FormikProvider value={formik}>
@@ -138,7 +152,12 @@ export function FormCheckout() {
           </div>
         </fieldset>
 
-        <Button type="submit" className="w-full">
+        <Button
+          type="submit"
+          className="w-full"
+          loading={formik.isSubmitting}
+          disabled={formik.isSubmitting}
+        >
           Finalizar pagamento
         </Button>
       </form>
