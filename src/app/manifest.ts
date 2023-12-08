@@ -9,8 +9,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: siteConfig.description,
     start_url: '/',
     display: 'standalone',
-    background_color: '#fff',
-    theme_color: '#fff',
+    background_color: '#ffffff',
+    theme_color: '#ffffff',
     icons: [
       {
         src: '/images/favicons/icon-512x512.png',
@@ -46,6 +46,12 @@ export default function manifest(): MetadataRoute.Manifest {
         src: '/images/favicons/icon-512x512.png',
         sizes: '512x512',
         type: 'image/png',
+      },
+      {
+        src: '/images/favicons/maskable-icon-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'maskable',
       },
     ],
   }
