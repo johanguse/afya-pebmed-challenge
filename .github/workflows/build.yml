@@ -1,12 +1,8 @@
 name: Run Tests
 
 on:
-  push:
-    branches:
-      - '*'
-  pull_request:
-    branches:
-      - main
+  - push
+  - pull_request
 
 jobs:
   cache-and-test:
