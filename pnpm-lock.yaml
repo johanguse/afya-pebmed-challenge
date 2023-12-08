@@ -39,8 +39,8 @@ dependencies:
     specifier: ^18
     version: 18.2.0(react@18.2.0)
   react-input-mask:
-    specifier: github:zenbill/react-input-mask
-    version: github.com/zenbill/react-input-mask/08dc1189e26196f2371809a3b7cd746ae4b72d62(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^2.0.4
+    version: 2.0.4(react-dom@18.2.0)(react@18.2.0)
   tailwind-merge:
     specifier: ^2.0.0
     version: 2.1.0
@@ -3966,6 +3966,18 @@ packages:
     resolution: {integrity: sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==}
     dev: false
 
+  /react-input-mask@2.0.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-1hwzMr/aO9tXfiroiVCx5EtKohKwLk/NT8QlJXHQ4N+yJJFyUuMT+zfTpLBwX/lK3PkuMlievIffncpMZ3HGRQ==}
+    peerDependencies:
+      react: '>=0.14.0'
+      react-dom: '>=0.14.0'
+    dependencies:
+      invariant: 2.2.4
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      warning: 4.0.3
+    dev: false
+
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -5020,21 +5032,4 @@ packages:
       '@types/react': 18.2.42
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)
-    dev: false
-
-  github.com/zenbill/react-input-mask/08dc1189e26196f2371809a3b7cd746ae4b72d62(react-dom@18.2.0)(react@18.2.0):
-    resolution: {tarball: https://codeload.github.com/zenbill/react-input-mask/tar.gz/08dc1189e26196f2371809a3b7cd746ae4b72d62}
-    id: github.com/zenbill/react-input-mask/08dc1189e26196f2371809a3b7cd746ae4b72d62
-    name: react-input-mask
-    version: 2.0.4
-    prepare: true
-    requiresBuild: true
-    peerDependencies:
-      react: '>=0.14.0'
-      react-dom: '>=0.14.0'
-    dependencies:
-      invariant: 2.2.4
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      warning: 4.0.3
     dev: false
