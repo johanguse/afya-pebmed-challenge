@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import React from 'react'
 
@@ -6,17 +6,16 @@ import { render, screen } from '@testing-library/react'
 
 import { Header } from '@/components/header'
 
-vi.mock('next/image', () => ({
-  __esModule: true,
-  default: ({ src, alt }) => <img src={src} alt={alt} />,
-}))
-
 describe('Header', () => {
-  it('renders the icon arrow and the logo image', () => {
+  it('renders correctly and applies given class names', () => {
     render(<Header />)
 
-    const logo = screen.getByAltText('logo W')
-    expect(logo).toBeInTheDocument()
-    expect(logo).toHaveAttribute('src', '/images/logo_w.svg')
+    const headerElement = screen.getByTestId('header')
+    expect(headerElement).toBeInTheDocument()
+    expect(headerElement).toHaveClass('flex')
+    expect(headerElement).toHaveClass('items-center')
+    expect(headerElement).toHaveClass('p-4')
+    expect(headerElement).toHaveClass('lg:px-16')
+    expect(headerElement).toHaveClass('lg:py-8')
   })
 })
