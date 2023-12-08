@@ -9,7 +9,7 @@ export function Header() {
       className="flex items-center p-4 lg:px-16 lg:py-8"
       data-testid="header"
     >
-      <Link href="/" className="p-2">
+      <Link href="/" className="p-2" aria-label="voltar">
         <IconArrowLeft width={8} height={13} />
       </Link>
       <LogoW width={42} height={30} aria-label="logo W" className="mx-auto" />
