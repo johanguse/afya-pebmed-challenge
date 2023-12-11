@@ -5,11 +5,22 @@
 
 ![og](https://github.com/johanguse/afya-pebmed-challenge/assets/6184866/6712eb4f-17c2-45ee-a1e1-170f5ce17b56)
 
-This is the README for the Afya PEBMED Challenge project.
+This document is the README for the Afya PEBMED Challenge project.
 
-Develop the frontend of a checkout system where a user can subscribe annually or monthly, displaying success or error when submitting the form, and sending payment information for processing by the backend.
+Your task is to create the frontend for a checkout system that allows users to subscribe either annually or monthly. The system should display a success or error message upon form submission and send payment details for backend processing.
 
-Follow the instructions below to set up and run the project on your local machine.
+Please refer to the documentation in the `docs` folder for specific requirements of this coding challenge.
+
+To set up and run the project on your local machine, follow the instructions provided below.
+
+> [!NOTE]
+> The company decided to proceed with a different developer before I had the chance to submit this challenge for code review.
+
+##### Todo
+
+- [ ] Add more Unit Test
+- [ ] Add E2E Test
+- [ ] Improve the documentation
 
 ## 🤖 Tech stack
 
